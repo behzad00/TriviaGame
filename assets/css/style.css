@@ -1,0 +1,24 @@
+body {
+  background-image:url("wallpaper.jpg"); 
+  color: #777;
+ text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+	background: yellow;
+}
+
+#start {
+	width : 400px;
+	margin: auto;
+}
+
+#done {
+	width : 400px;
+	margin: auto;
+	text-align: center;
+}
