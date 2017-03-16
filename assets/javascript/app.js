@@ -3,7 +3,7 @@ var number = 40;
 var intervalId;
 var numberOfCorrectAnswers = 0 ;
 var numberOfIncorrectAnswers = 0 ;
-var numberOfUnAnswers = 0 ;
+var numberOfUnAnswered = 0 ;
 
 
 
@@ -47,6 +47,9 @@ function run() {
     		stop();
     		$("#page2").hide();
     		$("#page3").show();
+    		$("#correctanswers").html("Correct Answers: " + numberOfCorrectAnswers);
+    		$("#incorrectanswers").html("Incorrect Answers: " + numberOfIncorrectAnswers);
+    		$("#unanswered").html("Unanswered: " + nnumberOfUnAnswered);
 
     	});
     }
