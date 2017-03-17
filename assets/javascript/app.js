@@ -1,3 +1,5 @@
+$(document).ready(function(){
+  
 var number = 40;
 
 var intervalId;
@@ -12,11 +14,15 @@ var correctAnswers = ["Berlin", "Toronto", "Moonlight", "121", "25 performed by 
 console.log(correctAnswers);
 
 function run() {
+		 //$(".page1").show();
+	    $(".page3").hide();
+        $(".page2").hide();
     intervalId = setInterval(decrement, 1000);
     	$("#start").click(function() {
-        $("#page1").hide();
+        $(".page1").hide();
+        // $("#page3").hide();
+        $(".page2").show();
         $("#page3").hide();
-        $("#page2").show();
     });
 
 
@@ -27,8 +33,8 @@ function run() {
 		if (number === 0) {
 
 			stop();
-            $("#page2").hide();
-            $("#page3").show();
+            $(".page2").hide();
+            $(".page3").show();
 
         }
 
@@ -45,8 +51,8 @@ function run() {
     	$("#done").click(function(){
     		number === 0 ;
     		stop();
-    		$("#page2").hide();
-    		$("#page3").show();
+    		$(".page2").hide();
+    		$(".page3").show();
     		$("#correctanswers").html("Correct Answers: " + numberOfCorrectAnswers);
     		$("#incorrectanswers").html("Incorrect Answers: " + numberOfIncorrectAnswers);
     		$("#unanswered").html("Unanswered: " + nnumberOfUnAnswered);
@@ -57,3 +63,4 @@ function run() {
 };
 
 run();
+});
